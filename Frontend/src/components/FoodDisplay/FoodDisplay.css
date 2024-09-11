@@ -8,6 +8,7 @@
 }
 
 .food-display-list{
+    margin-top:35px;
     display:grid;
     grid-template-columns:repeat(Auto-fill,minmax(240px,1fr));
     gap:30px;
