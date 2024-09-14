@@ -43,7 +43,7 @@
     color:white;
     background-color:tomato;
     font-size:15px;
-    cursor:pointr;
+    cursor:pointer;
 }
 .login-popup-condition {
     display:flex;
@@ -56,4 +56,5 @@
 }
 .login-popup p span{
     color:tomato;
+    cursor:pointer;
 }
