@@ -3,7 +3,7 @@ import "./cart.css";
 import { StoreContext } from "../../context/StoreContext";
 import { useNavigate } from "react-router-dom";
 
-const cart = () => {
+const Cart = () => {
   const { cartItems, food_list, removeFromCart, getTotalCartAmount, url } =
     useContext(StoreContext);
 
@@ -22,12 +22,13 @@ const cart = () => {
         </div>
         <br />
         <hr />
-        {food_list.map((item, index) => {
+        {food_list.map((item) => {
+          // Only render items that are in the cart (quantity > 0)
           if (cartItems[item._id] > 0) {
             return (
-              <div>
+              <div key={item._id}> {/* Add a unique `key` prop here */}
                 <div className="cart-items-title cart-items-item">
-                  <img src={url + "/images/" + item.image} />
+                  <img src={url + "/images/" + item.image} alt={item.name} />
                   <p>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{cartItems[item._id]}</p>
@@ -40,6 +41,7 @@ const cart = () => {
               </div>
             );
           }
+          return null; // In case the condition is not met, return null
         })}
       </div>
       <div className="cart-bottom">
@@ -75,4 +77,4 @@ const cart = () => {
   );
 };
 
-export default cart;
+export default Cart;
