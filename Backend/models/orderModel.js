@@ -13,14 +13,14 @@ const orderShema = new mongoose.Schema({
   address: {
     type: String,
     required: true,
-  },
+  }, 
   status: {
     type: String,
     default: "Food Processing",
   },
   date: {
     type: Date,
-    default: Date.now,
+    default: Date.now(),
   },
   payment:{
     type:Boolean,default:false

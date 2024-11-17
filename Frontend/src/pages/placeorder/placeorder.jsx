@@ -27,15 +27,6 @@ const PlaceOrder = () => {
   const handlePlaceOrder = async (event) => {
     event.preventDefault();
 
-    // Check for empty fields before proceeding
-    const requiredFields = ['firstName', 'lastName', 'email', 'street', 'city', 'state', 'zipcode', 'country', 'phone'];
-    for (let field of requiredFields) {
-      if (!data[field]) {
-        alert(`${field} is required!`);
-        return;
-      }
-    }
-
     let orderItems = [];
     food_list.map((item) => {
       if (cartItems[item._id] > 0) {
@@ -43,15 +34,13 @@ const PlaceOrder = () => {
         itemInfo['quantity'] = cartItems[item._id];
         orderItems.push(itemInfo);
       }
-    });
+    })
 
     let orderData = {
       address: data,
       items: orderItems,
       amount: getTotalCartAmount() + 2,
-    };
-
-    try {
+    }
       let response = await axios.post(url + "/api/order/place", orderData, { headers: { token } });
 
       if (response.data.success) {
@@ -60,11 +49,8 @@ const PlaceOrder = () => {
       } else {
         alert("Error placing the order");
       }
-    } catch (error) {
-      console.error('Error placing order:', error);
-      alert('An error occurred while placing your order');
     }
-  };
+  
 
   return (
     <form onSubmit={handlePlaceOrder} className='place-order'>
@@ -91,17 +77,17 @@ const PlaceOrder = () => {
           <h2>Cart Totals</h2>
           <div className='cart-total-details'>
             <p>Subtotal</p>
-            <p>${getTotalCartAmount()}</p>
+            <p>&#8377; {getTotalCartAmount()}</p>
           </div>
           <hr/>
           <div className='cart-total-details'>
             <p>Delivery Fee</p>
-            <p>${getTotalCartAmount() === 0 ? 0 : 2}</p>
+            <p>&#8377; {getTotalCartAmount() === 0 ? 0 : 2}</p>
           </div>
           <hr/>
           <div className='cart-total-details'>
             <h4>Total</h4>
-            <p>${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</p>
+            <p>&#8377; {getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}</p>
           </div>
           <button type='submit'>PROCEED TO PAYMENT</button>
         </div>
