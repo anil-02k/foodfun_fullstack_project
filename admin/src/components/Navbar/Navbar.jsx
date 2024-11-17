@@ -5,7 +5,10 @@ import {assets} from '../../assets/assets'
 const Navbar = () => {
   return (
     <div className='navbar'>
-      <img className='logo' src={assets.logo}/>
+      <div>
+      <h1 style={{color:'tomato'}}>FoodFun.</h1>
+      <p style={{fontSize:'21px',fontWeight:'bold'}}>Admin panel</p>
+      </div>
       <img className='profile' src={assets.profile_image}/>
     </div>
   )

@@ -5,7 +5,9 @@
     align-item:center; 
     margin: 1px auto;      
 }
-
+h1{
+    font-size:37px;
+}
 .navbar .logo{
     width:150px;
 }
@@ -97,6 +99,9 @@
     color:tomato;
 }
 @media(max-width:1050px){
+    h1{
+        font-size:34px;
+    }
     .navbar .logo{
         width:140px;
     }
@@ -134,7 +139,9 @@
     }
 }
 @media(max-width:750px){
-  
+    h1{
+        font-size:32px;
+    }
     .navbar-menu{
         display:none;
     }

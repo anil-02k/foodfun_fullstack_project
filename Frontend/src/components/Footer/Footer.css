@@ -9,6 +9,9 @@
     padding-top:80px;
     margin-top:100px;
 }
+h1{
+    font-size:37px;
+}
 .footer-content{
     width:100%;
     display:grid;
@@ -50,5 +53,8 @@
     }
     .footer-copyright{
         text-align:center;
+    }
+    h1{
+        font-size:32px;
     }
 }

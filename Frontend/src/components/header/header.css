@@ -1,8 +1,10 @@
 .header{
+    width:100%;
     height:34vw;
     margin:30px auto;
-    background:url(/header_img.png) no-repeat;
-    background-size:contain;
+    background:url(/1350722.png) no-repeat;
+    background-size:cover;
+    border-radius:15px;
     position:relative;
 }
 

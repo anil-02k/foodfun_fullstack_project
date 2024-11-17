@@ -7,7 +7,7 @@ const Footer = () => {
     <div className='footer' id='footer'>
       <div className='footer-content'>
         <div className='footer-content-left'>
-            <img src={assets.logo}/>
+            <h1 style={{color:'tomato'}}>FoodFun.</h1>
             <p>Food provides essential nutrients for overall health and well- provides essential nutrients for overall healt provides essential nutrients for.</p>
             <div className='footer-social-icons'>
                 <img src={assets.facebook_icon}/>
@@ -28,12 +28,12 @@ const Footer = () => {
             <h2>GET IN TOUCH</h2>
             <ul>
                 <li>+1-232-323-3323</li>
-                <li>tomato@gmail.com</li>
+                <li>foodfun@gmail.com</li>
             </ul>
         </div>
       </div>
       <hr></hr>
-      <p className='footer-copyright'>Copyright 2024 © Tomato.com - All Rights Reserved.</p>
+      <p className='footer-copyright'>Copyright 2024 © FoodFun.com - All Rights Reserved.</p>
     </div>
   )
 }
