@@ -30,6 +30,7 @@
 .food-item-name-rating img{
     width:70px;
     height:20px;
+    color:#FEC311;
 }
 
 .food-item-desc{
@@ -38,7 +39,7 @@
 
 }
 .food-item-price{
-    color:tomato;
+    color:#FEC311;
     font-size:22px;
     font-weight:500;
     margin:10px 0;

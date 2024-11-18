@@ -7,7 +7,8 @@ const Footer = () => {
     <div className='footer' id='footer'>
       <div className='footer-content'>
         <div className='footer-content-left'>
-            <h1 style={{color:'tomato'}}>FoodFun.</h1>
+
+            <h1 style={{color:'#FEC311'}}>Food Fun</h1>
             <p>Food provides essential nutrients for overall health and well- provides essential nutrients for overall healt provides essential nutrients for.</p>
             <div className='footer-social-icons'>
                 <img src={assets.facebook_icon}/>

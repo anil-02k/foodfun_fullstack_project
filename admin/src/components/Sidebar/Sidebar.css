@@ -26,7 +26,7 @@
 
 .active{
     background-color:#fff0ed;
-    border-color:tomato;
+    border-color:#FEC311;
 }
 
 @media(max-width:900px){
