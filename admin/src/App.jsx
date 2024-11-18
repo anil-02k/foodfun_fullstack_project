@@ -10,7 +10,7 @@ import { ToastContainer } from 'react-toastify';
 
 const App = () => {
 
-  const url="http://localhost:4000"
+  const url="https://foodfun-fullstack-project-backend.onrender.com"
 
   return (
     <div>
